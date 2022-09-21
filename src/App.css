@@ -1,41 +1,65 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-.App {
-  /* text-align: center; */
+
+/* skills-bar  */
+.skill img {
+  clip-path: polygon(0% 3%, 118% 7%, 86% 97%, 15% 79%);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.details {
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  margin-bottom: 10px;
 }
+.bar {
+  position: relative;
 
-.App-link {
-  color: #61dafb;
-}
+  border: 2px solid #0d96e0;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+  border-radius: 20px;
+}
+.bar div {
+  position: relative;
+  width: 0;
+  height: 9px;
+  border-radius: 10px;
+  background-color: #0d96e0;
+}
+.skills:not(:last-child) {
+  margin-bottom: 30px;
+}
+#html-bar {
+  animation: html-fill 2s forwards;
+}
+@keyframes html-fill {
+  100% {
+    width: 90%;
   }
 }
+#css-bar {
+  animation: css-fill 2s forwards;
+}
+@keyframes css-fill {
+  100% {
+    width: 90%;
+  }
+}
+#javascript-bar {
+  animation: js-fill 2s forwards;
+}
+@keyframes js-fill {
+  100% {
+    width: 65%;
+  }
+}
+#bootstrap-bar {
+  animation: bootstrap-fill 2s forwards;
+}
+@keyframes bootstrap-fill {
+  100% {
+    width: 95%;
+  }
+}
+/* skills-bar end  */

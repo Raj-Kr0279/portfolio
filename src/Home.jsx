@@ -1,32 +1,65 @@
 import React from "react";
-import "./index.css";
+import "../src/App.css";
+import Header from "../src/components/Header/Header";
+import Hero from "../src/components/Hero/Hero";
+import Footer from "./components/Footer/Footer";
+import codeImg from "./assets/images/code.png";
+import Projects from "./Projects";
 // import ".././../App.css";
 
 function Home() {
   return (
-    <div className="bg-white dark:bg-slate-800 rounded-lg px-6 py-8 ring-1 ring-slate-900/5 shadow-xl">
-      <div>
-        <span className="inline-flex items-center justify-center p-2 bg-indigo-500 rounded-md shadow-lg">
-          <svg
-            className="h-6 w-6 text-white"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            aria-hidden="true"
-          >
-            {/* ... */}
-          </svg>
-        </span>
+    <>
+      <Header />
+      <div className="wrapper font-black dark:bg-black dark:text-white transition-all flex justify-center">
+        <div className="container">
+          <Hero />
+          <section className="skill h-screen columns md:columns-2 mx-auto mt-8 flex justify-between items-center">
+            <img src={codeImg} alt="" className="w-100" />
+            <div className="skill-content w-[60%]">
+              <div class="skills">
+                <div class="details">
+                  <span>HTML</span>
+                  <span>90%</span>
+                </div>
+                <div class="bar">
+                  <div id="html-bar"></div>
+                </div>
+              </div>
+              <div class="skills">
+                <div class="details">
+                  <span>CSS</span>
+                  <span>90%</span>
+                </div>
+                <div class="bar">
+                  <div id="javascript-bar"></div>
+                </div>
+              </div>
+              <div class="skills">
+                <div class="details">
+                  <span>JavaScript</span>
+                  <span>65%</span>
+                </div>
+                <div class="bar">
+                  <div id="css-bar"></div>
+                </div>
+              </div>
+              <div class="skills">
+                <div class="details">
+                  <span>Bootstrap</span>
+                  <span>98%</span>
+                </div>
+                <div class="bar">
+                  <div id="bootstrap-bar"></div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <Projects />
+        </div>
       </div>
-      <h3 className="text-slate-900 dark:text-white mt-5 text-base font-medium tracking-tight">
-        Writes Upside-Down
-      </h3>
-      <p className="text-slate-500 dark:text-slate-400 mt-2 text-sm">
-        The Zero Gravity Pen can be used to write in any orientation, including
-        upside-down. It even works in outer space.
-      </p>
-    </div>
+      <Footer />
+    </>
   );
 }
 
