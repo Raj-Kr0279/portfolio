@@ -3,12 +3,35 @@ import "./index.scss";
 import proj1 from "./assets/images/proj1.webp";
 import proj2 from "./assets/images/proj2.webp";
 import proj3 from "./assets/images/proj3.webp";
+import Aos from "aos";
 
 function Projects() {
+  Aos.init();
   return (
     <>
-      <div className="columns md:columns-3 items-center flex justify-center gap-4 mb-10">
-        <div className="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
+      <h1
+        className="text-2xl font-normal text-center mb-12 border-blue-400 border-b-2 p-3 transition-all "
+        data-aos="fade-left"
+        data-aos-offset="200"
+        data-aos-delay="10"
+        data-aos-duration="1000"
+        data-aos-mirror="true"
+        data-aos-once="false"
+        data-aos-anchor-easing="ease-in-out"
+      >
+        my <span className="text-7xl text-blue-500">Projects</span>
+      </h1>
+      <div className="grid grid-cols-3 place-content-center place-items-center gap-4 mb-10">
+        <div
+          className="proj-card max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
+          data-aos="zoom-in"
+          data-aos-offset="200"
+          data-aos-delay="10"
+          data-aos-duration="1000"
+          data-aos-mirror="true"
+          data-aos-once="false"
+          data-aos-anchor-easing="ease-in-out"
+        >
           <a href="#">
             <img className="rounded-t-lg" src={proj1} alt="" />
           </a>
@@ -39,7 +62,16 @@ function Projects() {
             </a>
           </div>
         </div>
-        <div className="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
+        <div
+          className="proj-card max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
+          data-aos="zoom-in"
+          data-aos-offset="200"
+          data-aos-delay="70"
+          data-aos-duration="1000"
+          data-aos-mirror="true"
+          data-aos-once="false"
+          data-aos-anchor-easing="ease-in-out"
+        >
           <a href="#">
             <img className="rounded-t-lg" src={proj2} alt="" />
           </a>
@@ -71,7 +103,16 @@ function Projects() {
             </a>
           </div>
         </div>
-        <div className="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
+        <div
+          className="proj-card max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
+          data-aos="zoom-in"
+          data-aos-offset="200"
+          data-aos-delay="100"
+          data-aos-duration="1000"
+          data-aos-mirror="true"
+          data-aos-once="false"
+          data-aos-anchor-easing="ease-in-out"
+        >
           <a href="#">
             <img className="rounded-t-lg" src={proj3} alt="" />
           </a>

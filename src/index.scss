@@ -5,7 +5,36 @@
 .hero {
   .hero-inner {
     img {
-      width: 400px;
+      // width: 400px;
     }
+  }
+}
+.proj-card {
+  width: 21rem;
+}
+.contact-hero {
+  position: relative;
+  top: 0;
+  left: 0;
+  background: #ff002d;
+  background-image: url(./assets/images/contactbg.jpg);
+  background-image: url(./assets/images/contactbg.jpg) no-repeat center
+      center/cover,
+    linear-gradient(#eb01a5, #d13531);
+  height: 60vh;
+  width: 100%;
+  z-index: 2;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: multiply;
+  filter: brightness(0.8);
+  h1 {
+    position: absolute;
+    font-size: 4rem;
+    color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }

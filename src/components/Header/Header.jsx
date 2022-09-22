@@ -9,7 +9,7 @@ function Header() {
 
   return (
     <>
-      <nav className="h-20 flex justify-around items-center shadow dark:bg-black dark:text-white transition-all">
+      <nav className="h-20 flex justify-around items-center shadow dark:bg-black dark:text-white transition-all dark:shadow-lg dark:shadow-white w-full">
         <div className="logo">
           <span>Rajendra</span>
         </div>
@@ -26,7 +26,7 @@ function Header() {
             <Link to="/Contact">Contact</Link>
           </li>
         </ul>
-        <div className="theme-toggler p-3 rounded-full shadow-[#0000007d] shadow-lg text-white bg-slate-500 dark:bg-black">
+        <div className="theme-toggler p-3 rounded-full shadow-[#0000007d] shadow-lg text-white bg-slate-500 dark:bg-black fixed top-4 right-4 z-50">
           <span onClick={() => setTheme(colorTheme)}>
             {colorTheme === "dark" ? (
               <svg
